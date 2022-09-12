@@ -13,7 +13,7 @@ class ProductTest < ActiveSupport::TestCase
 
   test 'product is not valid without unique title' do 
     product = Product.new(title:  products(:ruby).title,
-                            description: 'yyy',
+                          description: 'yyy',
                           price: 1,
                           image_url: 'fred.gif')
     assert product.invalid?
